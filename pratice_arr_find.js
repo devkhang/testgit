@@ -8,5 +8,4 @@ function isPrime(num) {
   }
   return num > 1;
 }
-
 console.log(array.find(isPrime)); // [2, 3, 5, 7, 11, 13]
