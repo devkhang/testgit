@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--<form name='frm' action='..'>
+        <input type="button" name='btn1' value="Go to google" onclick="goToGoogle();">
+        <input type="text" name='txt1' value='' onchange='document.frm.btn1.value = this.value'>
+        <input type="radio" name="rd1" value="yellow" onchange="changeBackGroundColor()">backgroudn color yellow 
+        <input type="radio" name="rd1" value="red" onchange="changeBackGroundColor()">backgroudn color red 
+        <p id="p1">wbi lord</p>
+    </form>
+-->
+    <form name="frm1" action=".."  onsubmit="kiemTraDuLieuNhap();">
+        Name :<input type="text" name="txt1">
+        <br>
+        Nam sinh: <select name="slt1">
+            <script>
+               for(let i=1990; i<2023; ++i){
+                document.write('<option value="'+i+'">'+i+'</option>');
+               }
+            </script>
+        </select>
+
+        <input type="submit" name="sb2" value="Submit">
+    </form>
+    <script>
+        console.log('ih');
+    function goToGoogle(){  
+        alert(location);
+        if(confirm('Are you sure?')){
+            location = 'https://google.com';
+        }
+    }
+    function changeBackGroundColor(){
+        document.getElementById("p1").style.backgroundColor=document.frm.rd1.value;
+    }
+    function kiemTraDuLieuNhap(){
+        let age=Number(document.frm1.slt1.value);
+        let currentYear=(new Date()).getFullYear();
+        if(currentYear-age>=18){
+            window.alert("du tuoi di tu");
+            return false;
+        }
+        else{
+            window.alert("asfdadsf");
+        }
+
+        return false;
+
+    }
+    </script>
+</body>
+</html>
